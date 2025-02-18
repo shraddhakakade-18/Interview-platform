@@ -89,12 +89,7 @@ const Login = () => {
               </div>
   
               <div className="login-center-options">
-                <div className="remember-div">
-                  <input type="checkbox" id="remember-checkbox" />
-                  <label htmlFor="remember-checkbox">
-                    Remember for 30 days
-                  </label>
-                </div>
+                
                 </div>
 
                 <div>
