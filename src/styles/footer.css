@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap');
+
+/* Footer.css */
+.footer {
+  background: #2836b1;
+  color: white; /* Change text to white for better contrast */
+  padding: 16px 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif; /* Apply Open Sans for body text */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  text-align: left;
+  flex: 1;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.footer-heading {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif; /* Apply Playfair Display for headings */
+  color: white; /* White text for headings */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-links li {
+  margin-bottom: 4px;
+}
+
+.footer-link {
+  color: white; /* Change to white for consistency */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: #a0aec0; /* Lighter shade on hover */
+  transform: translateX(5px);
+  letter-spacing: 1.5px; /* Slightly increase space between letters on hover */
+}
+
+/* Footer Contact Section */
+.footer-contact {
+  font-size: 18px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: white; /* White text for contact information */
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 22px;
+  text-decoration: none;
+  color: white; /* Social icons in white */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #a0aec0; /* Lighter color on hover */
+}
+
+.footer-text {
+  font-size: 18px;
+  margin-top: 8px;
+  text-align: center;
+  opacity: 0.8;
+  color: white; /* White text for footer text */
+}

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap');
+
+/* Section Styling */
+.how-it-works {
+  background: white;
+  padding: 100px 20px; /* Increased padding for a bigger section */
+  text-align: center;
+  color: #2836b1; /* Changed text color to match the deep blue */
+  font-family: 'Open Sans', sans-serif; /* Applied Open Sans for body text */
+  height: 500px;
+}
+
+/* Heading */
+.section-heading {
+  font-size: 40px; /* Increased font size for larger heading */
+  font-family: 'Playfair Display', serif; /* Applied Playfair Display for the heading */
+  letter-spacing: 2px;
+  margin-bottom: 50px; /* Increased margin for better spacing */
+  color: #2836b1;
+  text-transform: uppercase;
+  position: relative;
+  animation: moveUpDown 2s ease-in-out infinite; /* Animation applied */
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Default shadow */
+}
+
+/* Keyframes for up and down animation */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Initial shadow */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up by 10px */
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow grows as the element moves up */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow returns to original size */
+  }
+}
+
+/* Steps Container */
+.steps-container {
+  display: flex;
+  justify-content: space-evenly; /* Ensures equal spacing */
+  align-items: center;
+  flex-wrap: nowrap; /* Prevents wrapping of items */
+  gap: 30px;
+  max-width: 1200px; /* Ensures content fits within a reasonable width */
+  margin: auto;
+  overflow-x: auto; /* Enables horizontal scrolling if needed */
+}
+
+/* Step Cards */
+.step {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Light blue gradient */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Increased padding for bigger cards */
+  border-radius: 12px;
+  width: 200px; /* Increased size */
+  height: 150px; /* Increased size */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px; /* Increased font size */
+  font-family: 'Open Sans', sans-serif; /* Applied Open Sans for the text */
+  color: #2836b1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effects */
+.step:hover {
+  transform: translateY(-5px); /* Moves the step upwards */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Decorative border effect on hover */
+.step::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.step:hover::before {
+  opacity: 1; /* Border effect visible on hover */
+}
+
+/* Icons */
+.step-icon {
+  font-size: 55px; /* Increased icon size for better proportion */
+  margin-bottom: 15px;
+  color: #2836b1; /* Matching icon color to the title */
+}
+
+/* Arrows (Increased Size) */
+.arrow {
+  font-size: 50px; /* Increased arrow size */
+  color: #2836b1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .steps-container {
+    flex-wrap: nowrap; /* Prevents wrapping on smaller screens */
+    justify-content: flex-start; /* Aligns items at the start */
+    overflow-x: auto; /* Enables horizontal scrolling */
+  }
+
+  .step {
+    width: 180px;
+    height: 180px;
+    font-size: 18px; /* Adjusted font size */
+  }
+
+  .step-icon {
+    font-size: 50px; /* Adjusted for better proportion */
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Horizontal scrolling */
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+
+  .step {
+    width: 160px;
+    height: 160px;
+    font-size: 16px;
+  }
+
+  .arrow {
+    display: block; /* Ensures the arrow is visible */
+  }
+
+  .section-heading {
+    font-size: 40px; /* Adjusted font size for smaller screens */
+  }
+}
