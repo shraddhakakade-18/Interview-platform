@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="footer-text">
-        &copy; {new Date().getFullYear()} Your Guide Project. All rights
+        &copy; {new Date().getFullYear()} Your Guide. All rights
         reserved.
       </p>
     </footer>

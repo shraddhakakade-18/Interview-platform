@@ -17,7 +17,7 @@ const WhyYourGuide = () => {
 
   return (
     <section className="why-your-guide">
-      <h2 className="section-title">Why Your Guide</h2>
+      <h2 className="section-title">Why Your Guide ?</h2>
       <div className="cards-container">
         {features.map((feature, index) => (
           <div className="card" key={index}>

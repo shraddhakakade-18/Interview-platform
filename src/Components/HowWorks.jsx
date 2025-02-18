@@ -5,7 +5,7 @@ import { FaUserPlus, FaSearch, FaHandshake, FaTrophy } from "react-icons/fa"; //
 const HowItWorks = () => {
   return (
     <section className="how-it-works">
-      <h2 className="section-heading">How It Works</h2>
+      <h2 className="section-heading">How It Works ? </h2>
 
       <div className="steps-container">
         <div className="step">
