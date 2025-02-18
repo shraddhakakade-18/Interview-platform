@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -11,9 +11,9 @@ import "./App.css";
 
 const App = () => {
   const [showContent, setShowContent] = useState(false);
+  const location = useLocation(); // Get current route
 
   useEffect(() => {
-    // Set a timer to show content after 3 seconds
     setTimeout(() => {
       setShowContent(true);
     }, 3000);
@@ -27,18 +27,20 @@ const App = () => {
       {/* Main Content */}
       {showContent && (
         <>
-          <Navbar />
+          {/* Show Navbar only on Home Page */}
+          {location.pathname === "/" && <Navbar />}
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
+
+          {/* Footer */}
+          {/* <Footer /> */}
         </>
       )}
-
-      {/* Footer - Always displayed once content is loaded */}
-      {/* {showContent && <Footer />} */}
     </div>
   );
 };
