@@ -56,14 +56,12 @@ const Login = () => {
 
   return (
     <div className="login-main">
-      <div className="login-left">
+      {/* <div className="login-left">
         <img src={Image} alt="" />
-      </div>
+      </div> */}
       <div className="login-right">
         <div className="login-right-container">
-          <div className="login-logo">
-            <img src={Logo} alt="" />
-          </div>
+          
           <div className="login-center">
             <h2>Welcome back! </h2>
             <p>Please enter your details</p>
@@ -89,7 +87,7 @@ const Login = () => {
                   />
                 )}
               </div>
-
+  
               <div className="login-center-options">
                 <div className="remember-div">
                   <input type="checkbox" id="remember-checkbox" />
@@ -97,16 +95,21 @@ const Login = () => {
                     Remember for 30 days
                   </label>
                 </div>
-                <a href="#" className="forgot-pass-link">
+                </div>
+
+                <div>
+                  <a href="#" className="forgot-pass-link">
                   Forgot password?
                 </a>
+             
+                
               </div>
               <div className="login-center-buttons">
                 <button type="submit">Log In</button>
               </div>
             </form>
           </div>
-
+  
           <p className="login-bottom-p">
             Don't have an account? <Link to="/Registration">Sign Up</Link>
           </p>
@@ -114,6 +117,7 @@ const Login = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Login;
