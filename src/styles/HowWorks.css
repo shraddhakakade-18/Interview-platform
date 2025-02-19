@@ -6,7 +6,7 @@
   text-align: center;
   color: #2836b1; /* Changed text color to match the deep blue */
   font-family: 'Open Sans', sans-serif; /* Applied Open Sans for body text */
-  height: 500px;
+ 
 }
 
 /* Heading */
@@ -41,14 +41,14 @@
 /* Steps Container */
 .steps-container {
   display: flex;
-  justify-content: space-evenly; /* Ensures equal spacing */
+  justify-content:center; /* Ensures equal spacing */
   align-items: center;
  flex-wrap: wrap; /* Prevents wrapping of items */
-  gap: 30px;
+  gap: 40px;
    /* Ensures content fits within a reasonable width */
-  margin: auto;
+ 
    /* Enables horizontal scrolling if needed */
-  height: 300px;
+ 
 }
 
 /* Step Cards */
@@ -110,7 +110,10 @@
   filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .steps-container{
+    flex-direction: row;
+  }
     .step-icon {
     font-size: 45px; /* Reduce icon size */
     margin-bottom: 10px; /* Space between icon and text */
@@ -120,4 +123,16 @@
     display: none; /* Hide arrows on small screens */
   }
 }
+@media (max-width: 768px) {
+  .steps-container{
+    flex-direction: column;
+  }
+    .step-icon {
+    font-size: 45px; /* Reduce icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+  }
 
+  .arrow {
+    display: none; /* Hide arrows on small screens */
+  }
+}

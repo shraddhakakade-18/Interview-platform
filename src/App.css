@@ -52,4 +52,6 @@ body, html {
 
 .footer {
   margin-top: 40px;
+  position: relative;
+  margin-bottom: 1px;
 }
